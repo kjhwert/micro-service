@@ -10,7 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
     "paths": {
-      "*": ["../@mf-types/*"]
+      "*": ["./*", "../@mf-types/*"]
     }
   },
 }

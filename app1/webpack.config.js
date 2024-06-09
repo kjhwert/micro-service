@@ -39,13 +39,31 @@ const webpackConfig = {
                     presets: ['@babel/preset-react'],
                 },
             },
+            {
+                test: /\.(ts|tsx)$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
     plugins: [
         new ModuleFederationPlugin({
             name: 'app1',
             remotes: {
-                app2: 'app2@http://localhost:3002/remoteEntry.js',
+                app2: `promise new Promise((resolve, reject) => {
+                          const remoteUrl = (window.__ENV__.root.REMOTE_BASE_URI || '') + '/reservation/remoteEntry.js';
+            
+                          const script = document.createElement('script');
+                          script.src = remoteUrl;
+                          script.onload = () => {
+                            document.head.removeChild(script);
+                            resolve(window.app2);
+                          };
+                          script.onerror = () => {
+                            reject();
+                          };
+                          document.head.appendChild(script);
+                        })`,
             },
             shared: {
                 react: {
