@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkapp1=self.webpackChunkapp1||[]).push([[776],{719:(e,l,a)=>{a.r(l),a.d(l,{default:()=>s});var p=a(229),n=a.n(p);const s=()=>n().createElement("h1",null,"Hello World")}}]);

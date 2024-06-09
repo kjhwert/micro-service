@@ -39,6 +39,11 @@ const webpackConfig = {
                     presets: ['@babel/preset-react'],
                 },
             },
+            {
+                test: /\.(ts|tsx)$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ],
     },
     plugins: [
