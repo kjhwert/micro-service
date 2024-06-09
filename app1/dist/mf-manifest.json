@@ -1,0 +1,75 @@
+{
+  "id": "app1",
+  "name": "app1",
+  "metaData": {
+    "name": "app1",
+    "type": "app",
+    "buildInfo": {
+      "buildVersion": "1.0.0",
+      "buildName": "app1"
+    },
+    "remoteEntry": {
+      "name": "",
+      "path": "",
+      "type": "var"
+    },
+    "types": {
+      "path": "",
+      "name": "",
+      "zip": "",
+      "api": ""
+    },
+    "globalName": "app1",
+    "pluginVersion": "0.1.18",
+    "publicPath": "auto"
+  },
+  "shared": [
+    {
+      "id": "app1:react-dom",
+      "name": "react-dom",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    },
+    {
+      "id": "app1:react",
+      "name": "react",
+      "version": "18.3.1",
+      "singleton": true,
+      "requiredVersion": "^18.3.1",
+      "assets": {
+        "js": {
+          "async": [],
+          "sync": [
+            "main.js"
+          ]
+        },
+        "css": {
+          "async": [],
+          "sync": []
+        }
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "federationContainerName": "app2",
+      "moduleName": "Hello",
+      "alias": "app2",
+      "entry": "*"
+    }
+  ],
+  "exposes": []
+}
