@@ -52,6 +52,7 @@ const webpackConfig = {
             filename: 'remoteEntry.js',
             exposes: {
                 './Hello': './src/components/Hello',
+                './EventVerticalCard': './src/components/EventCard/EventVerticalCard',
             },
             shared: {
                 react: {
